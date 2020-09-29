@@ -11,7 +11,7 @@ module Opro
 
       included do
         around_action      :oauth_auth!
-        skip_before_action :verify_authenticity_token
+        # skip_before_action :verify_authenticity_token, :if => :valid_oauth?
       end
 
       def opro_authenticate_user!
